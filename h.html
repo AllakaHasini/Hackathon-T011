@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Live Weather Forecast with Temperature, Rain, and Wind Speed Data">
+    <meta name="keywords" content="Weather, Forecast, Climate, Temperature, Rain, Wind">
+    <meta name="author" content="Your Name">
+    <title>Weather Forecast 🌦️</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        table {
+            width: 80%;
+            margin: auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+    <script>
+        // Static Weather Data (Replace with real data if needed)
+        const weatherData = [
+            { date: "2025-03-01", temperature: "15°C", rain: "2mm", wind_speed: "10m/s" },
+            { date: "2025-03-02", temperature: "12°C", rain: "0mm", wind_speed: "8m/s" },
+            { date: "2025-03-03", temperature: "18°C", rain: "5mm", wind_speed: "12m/s" }
+        ];
+
+        function displayWeather() {
+            let tableContent = "<tr><th>Date</th><th>Temperature (°C)</th><th>Rain (mm)</th><th>Wind Speed (m/s)</th></tr>";
+            
+            weatherData.forEach(item => {
+                tableContent += `<tr>
+                    <td>${item.date}</td>
+                    <td>${item.temperature}</td>
+                    <td>${item.rain}</td>
+                    <td>${item.wind_speed}</td>
+                </tr>`;
+            });
+
+            document.getElementById("weather-table").innerHTML = tableContent;
+        }
+
+        window.onload = displayWeather;
+    </script>
+</head>
+<body>
+    <h1>Live Weather Forecast 🌦️</h1>
+    <table id="weather-table"></table>
+</body>
+</html>

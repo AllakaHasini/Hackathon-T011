@@ -1,0 +1,10 @@
+streamlit
+pandas
+requests
+scikit-learn
+matplotlib
+openmeteo_requests
+requests_cache
+retry_requests
+seaborn
+html
