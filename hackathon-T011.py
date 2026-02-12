@@ -4,6 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 from retry_requests import retry
+import html
 
 # Setup API client with caching and retries
 cache_session = requests_cache.CachedSession('.cache', expire_after=-1)
@@ -87,4 +88,5 @@ plt.xlabel("Date")
 plt.ylabel("Max Wind Speed (m/s)")
 plt.title("Daily Max Wind Speed")
 plt.xticks(rotation=45)
+
 plt.show()
